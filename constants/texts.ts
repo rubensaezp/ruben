@@ -98,6 +98,10 @@ const texts = {
         phone: "📱 Cel: 55 25653258",
         studio: "🎵 Dinamo Studio",
       },
+      instagramUrl: "https://www.instagram.com/dinamo_music_studio",
+      instagramAria:
+        "Instagram de Dinamo Music Studio — abre en una pestaña nueva",
+      instagramLabel: "Instagram",
     },
 
     footer: {
@@ -206,6 +210,10 @@ const texts = {
         phone: "📱 Cell: 55 25653258",
         studio: "🎵 Dinamo Studio",
       },
+      instagramUrl: "https://www.instagram.com/dinamo_music_studio",
+      instagramAria:
+        "Dinamo Music Studio on Instagram — opens in a new tab",
+      instagramLabel: "Instagram",
     },
 
     footer: {

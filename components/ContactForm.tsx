@@ -1,3 +1,4 @@
+import { IoLogoInstagram } from "react-icons/io5";
 import texts from "@/constants/texts";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -32,6 +33,21 @@ const ContactForm = () => {
             <p className="text-md">
               {texts[language].contact.contactInfo.studio}
             </p>
+            <a
+              href={texts[language].contact.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={texts[language].contact.instagramAria}
+              className="flex items-center gap-2 items-center"
+            >
+              <IoLogoInstagram
+                className="text-2xl text-pink-600 shrink-0"
+                aria-hidden
+              />
+              <span className="text-sm font-semibold underline">
+                @dinamo_music_studio
+              </span>
+            </a>
           </div>
 
           {/* Form */}
