@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Head>
         <title>{seo.title}</title>
-        <meta name="description" content={seo.descriptionEs} />
+        <meta name="description" content={seo.descriptionEn} />
         <meta name="keywords" content={seo.keywords} />
         <meta name="author" content={seo.author} />
         <meta name="creator" content={seo.author} />
@@ -36,11 +36,11 @@ export default function Home() {
         <meta property="og:url" content={`${siteUrl}/`} />
         <meta property="og:site_name" content={seo.titleShort} />
         <meta property="og:title" content={seo.title} />
-        <meta property="og:description" content={seo.descriptionEs} />
+        <meta property="og:description" content={seo.descriptionEn} />
         <meta property="og:image" content={ogImageUrl} />
         <meta
           property="og:image:alt"
-          content="Ruben Saez — Músico e ingeniero de audio, Dinamo Studio"
+          content="Ruben Saez — Musician & audio engineer, Dinamo Studio"
         />
 
         <meta name="twitter:card" content={seo.twitterCard} />

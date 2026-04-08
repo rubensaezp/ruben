@@ -1,5 +1,5 @@
 /**
- * SEO defaults (Spanish primary — matches default UI language).
+ * SEO defaults (English primary — matches default UI language).
  * Set NEXT_PUBLIC_SITE_URL in production, e.g. https://rubensaez.com
  * (falls back to VERCEL_URL on Vercel, then localhost for dev).
  */
@@ -12,12 +12,13 @@ export function getAbsoluteSiteUrl(): string {
 }
 
 export const seo = {
-  title: "Ruben Saez | Músico e Ingeniero de Audio — Dinamo Studio",
+  title: "Ruben Saez | Musician & Audio Engineer — Dinamo Studio",
+  titleEs: "Ruben Saez | Músico e Ingeniero de Audio — Dinamo Studio",
   titleShort: "Ruben Saez — Dinamo Studio",
+  descriptionEn:
+    "Music and audio post-production for film, TV, documentaries, and advertising. Composition, sound design, and Dolby Atmos mixing at Dinamo Studio, Mexico. Emmy, Cannes World, and more.",
   descriptionEs:
     "Música y postproducción de audio para cine, series, documentales y publicidad. Composición, diseño sonoro y mezcla Dolby Atmos en Dinamo Studio, México. Emmy, Cannes World y más.",
-  descriptionEn:
-    "Music and audio post-production for film, TV, documentaries, and advertising. Composition, sound design, and Dolby Atmos mixing at Dinamo Studio, Mexico.",
   keywords: [
     "Ruben Saez",
     "Dinamo Studio",
@@ -34,8 +35,8 @@ export const seo = {
     "film composer",
   ].join(", "),
   author: "Ruben Saez",
-  locale: "es_MX",
-  localeAlternate: "en_US",
+  locale: "en_US",
+  localeAlternate: "es_MX",
   twitterCard: "summary_large_image" as const,
   ogImagePath: "/bg-hero.jpg",
   instagramUrl: "https://www.instagram.com/dinamo_music_studio",
@@ -51,8 +52,8 @@ export function buildJsonLd(siteUrl: string) {
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
         name: seo.titleShort,
-        description: seo.descriptionEs,
-        inLanguage: ["es-MX", "en-US"],
+        description: seo.descriptionEn,
+        inLanguage: ["en-US", "es-MX"],
         publisher: { "@id": `${siteUrl}/#person` },
       },
       {
@@ -61,13 +62,13 @@ export function buildJsonLd(siteUrl: string) {
         name: "Ruben Saez",
         url: siteUrl,
         image: imageUrl,
-        jobTitle: "Músico e Ingeniero de Audio",
-        description: seo.descriptionEs,
+        jobTitle: "Musician & Audio Engineer",
+        description: seo.descriptionEn,
         sameAs: [seo.instagramUrl],
         knowsAbout: [
-          "Composición musical",
-          "Diseño sonoro",
-          "Mezcla de audio",
+          "Music composition",
+          "Sound design",
+          "Audio mixing",
           "Dolby Atmos",
         ],
         workLocation: {
