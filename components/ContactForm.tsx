@@ -53,8 +53,10 @@ const ContactForm = () => {
         email: "",
         phone: "",
       });
-    } catch (error: any) {
-      setErrorMessage(error.message || "Something went wrong.");
+    } catch (error: unknown) {
+      const message =
+        error instanceof Error ? error.message : "Something went wrong.";
+      setErrorMessage(message || "Something went wrong.");
     } finally {
       setLoading(false);
     }
